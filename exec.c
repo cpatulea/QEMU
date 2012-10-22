@@ -4197,6 +4197,8 @@ void dump_exec_info(FILE *f, fprintf_function cpu_fprintf)
     cpu_fprintf(f, "Translation buffer state:\n");
     cpu_fprintf(f, "gen code size       %td/%ld\n",
                 code_gen_ptr - code_gen_buffer, code_gen_buffer_max_size);
+    cpu_fprintf(f, "target code size    %d\n",
+                target_code_size);
     cpu_fprintf(f, "TB count            %d/%d\n", 
                 nb_tbs, code_gen_max_blocks);
     cpu_fprintf(f, "TB avg target size  %d max=%d bytes\n",

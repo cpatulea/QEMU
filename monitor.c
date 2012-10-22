@@ -2095,9 +2095,9 @@ static void do_info_profile(Monitor *mon)
     total = qemu_time;
     if (total == 0)
         total = 1;
-    monitor_printf(mon, "async time  %" PRId64 " (%0.3f)\n",
+    monitor_printf(mon, "async time  %" PRId64 " (%0.3f s)\n",
                    dev_time, dev_time / (double)get_ticks_per_sec());
-    monitor_printf(mon, "qemu time   %" PRId64 " (%0.3f)\n",
+    monitor_printf(mon, "qemu time   %" PRId64 " (%0.3f s)\n",
                    qemu_time, qemu_time / (double)get_ticks_per_sec());
     qemu_time = 0;
     dev_time = 0;

@@ -2213,8 +2213,8 @@ void tcg_dump_info(FILE *f, fprintf_function cpu_fprintf)
     int64_t tot;
 
     tot = s->interm_time + s->code_time;
-    cpu_fprintf(f, "JIT cycles          %" PRId64 " (%0.3f s at 2.4 GHz)\n",
-                tot, tot / 2.4e9);
+    cpu_fprintf(f, "JIT cycles          %" PRId64 " (%0.3f s)\n",
+                tot, tot / (double)get_ticks_per_sec());
     cpu_fprintf(f, "translated TBs      %" PRId64 " (aborted=%" PRId64 " %0.1f%%)\n", 
                 s->tb_count, 
                 s->tb_count1 - s->tb_count,
